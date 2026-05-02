@@ -6,7 +6,6 @@ function App() {
   const [charAllowed, setCharAllowed] = useState(false);
   const [password, setPassword] = useState("");
 
-  //useRef hook
   const passwordRef = useRef(null);
 
   const passwordGenerator = useCallback(() => {
@@ -34,7 +33,7 @@ function App() {
   }, [length, numberAllowed, charAllowed, passwordGenerator]);
 
   return (
-    <div className="w-full max-w-md mx-auto shadow-md rounded-lg px-4 py-3 my-8 text-orange-800 bg-gray-800 ">
+    <div className="w-full max-w-md mx-auto shadow-md rounded-lg px-4 py-3 my-8 text-white bg-black/30 ">
       <h1 className="text-white text-center my-3">Password Generator</h1>
       <div className="flex shadow rounded-lg overflow-hidden mb-4">
         <input
@@ -58,7 +57,7 @@ function App() {
           <input
             type="range"
             min={4}
-            max={20}
+            max={24}
             value={length}
             className="cursor-pointer"
             onChange={(e) => {
